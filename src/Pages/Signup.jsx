@@ -34,7 +34,7 @@ export default function Signup() {
       password,
     };
     axios
-      .post(`http://localhost:8080/users`, obj)
+      .post(`https://expense-data-i6k8.onrender.com/users`, obj)
       .then((res) => {
         toast({ description: "Registration Successful" });
         setName("");

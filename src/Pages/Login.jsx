@@ -24,13 +24,13 @@ export default function Login() {
 
   var check = false;
   const handleLogin = () => {
-    axios.get("http://localhost:8080/users").then((res) => {
+    axios.get("https://expense-data-i6k8.onrender.com/users").then((res) => {
       res.data.map((ele) => {
         if (ele.email == email && ele.password == password) {
           localStorage.setItem("tracker_app", JSON.stringify(ele));
           localStorage.setItem("isAuth", JSON.stringify(true));
           toast({ description: "Login Successful" });
-          navigate("/tracker");
+          navigate("/");
         }
       });
     });

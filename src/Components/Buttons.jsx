@@ -12,7 +12,7 @@ export const Buttons = () => {
       gap={"20px"}
     >
       <Link
-        to="/tracker"
+        to="/"
         padding={"10px"}
         borderRadius={"5px"}
         loadingText="Submitting"

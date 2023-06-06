@@ -65,11 +65,11 @@ export const Tracker = () => {
     if (type === "income") {
       newData = incData;
       newData.userId = userId;
-      url = "http://localhost:8080/income";
+      url = "https://expense-data-i6k8.onrender.com/income";
     } else {
       newData = expData;
-      newData.id = userId;
-      url = "http://localhost:8080/expense";
+      newData.userId = userId;
+      url = "https://expense-data-i6k8.onrender.com/expense";
     }
 
     axios

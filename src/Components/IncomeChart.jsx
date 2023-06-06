@@ -11,7 +11,7 @@ export const IncomeChart = () => {
 
   function getDatasetAtEvent() {
     axios
-      .get(`http://localhost:8080/income?userId=${userId}`)
+      .get(`https://expense-data-i6k8.onrender.com/income?userId=${userId}`)
       .then((res) => {
         setChartData(res.data);
       })
@@ -23,14 +23,18 @@ export const IncomeChart = () => {
   var salary = [];
   var gifts = [];
   var refunds = [];
+  let date = [];
   chartData.map((ele) => {
-    salary.push(ele.salary);
-    gifts.push(ele.gifts);
-    refunds.push(ele.refunds);
+    if (ele.userId == userId) {
+      salary.push(ele.salary);
+      gifts.push(ele.gifts);
+      refunds.push(ele.refunds);
+      date.push(ele.date);
+    }
   });
 
   const data = {
-    labels: ["Salary", "Gift", "Refund"],
+    labels: date,
     datasets: [
       {
         label: "Salary",

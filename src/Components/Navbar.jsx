@@ -11,7 +11,7 @@ export default function Header() {
         justify={"end"}
       >
         <Flex gap={"50px"} className="links">
-          <Link to="/tracker">Deshboard</Link>
+          <Link to="/">Deshboard</Link>
           <Link to="/signup">Signup</Link>
           <Link to="/login">Login</Link>
         </Flex>

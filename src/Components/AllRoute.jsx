@@ -13,7 +13,7 @@ export const AllRoute = () => {
     <>
       <Routes>
         <Route
-          path="/tracker"
+          path="/"
           element={
             <>
               <PrivateRoute>

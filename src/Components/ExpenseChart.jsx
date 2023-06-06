@@ -11,7 +11,7 @@ export const ExpenseChart = () => {
 
   function getDatasetAtEvent() {
     axios
-      .get(`http://localhost:8080/expense?userId=${userId}`)
+      .get(`https://expense-data-i6k8.onrender.com/expense?userId=${userId}`)
       .then((res) => {
         setChartData(res.data);
       })
@@ -26,25 +26,22 @@ export const ExpenseChart = () => {
   var bills = [];
   var vehicle_transport = [];
   var lifestyle = [];
+  var date = [];
 
   chartData.map((ele) => {
-    food_drink.push(ele.food_drink);
-    shopping.push(ele.shopping);
-    housing.push(ele.housing);
-    bills.push(ele.bills);
-    vehicle_transport.push(ele.vehicle_transport);
-    lifestyle.push(ele.lifestyle);
+    if (ele.userId == userId) {
+      food_drink.push(ele.food_drink);
+      shopping.push(ele.shopping);
+      housing.push(ele.housing);
+      bills.push(ele.bills);
+      vehicle_transport.push(ele.vehicle_transport);
+      lifestyle.push(ele.lifestyle);
+      date.push(ele.date);
+    }
   });
 
   const data = {
-    labels: [
-      "Food & Drink",
-      "Shopping",
-      "Housing",
-      "Bills",
-      "Vehicle & Transport",
-      "Lifestyle",
-    ],
+    labels: date,
     datasets: [
       {
         label: "Food & Drink",
@@ -52,7 +49,7 @@ export const ExpenseChart = () => {
         borderWidth: 1,
       },
       {
-        label: "shopping",
+        label: "Shopping",
         data: shopping,
         borderWidth: 1,
       },
