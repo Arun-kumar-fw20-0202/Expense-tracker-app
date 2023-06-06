@@ -1,3 +1,89 @@
 {
-  "users": []
+  "users": [
+    {
+      "fullname": "Arun Kumar",
+      "email": "katill@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "fullname": "rohan",
+      "email": "rohan@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "fullname": "dev",
+      "email": "dev@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "fullname": "dhruv",
+      "email": "dhruv@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "fullname": "tarun",
+      "email": "tarun@gmail.com",
+      "password": "123",
+      "id": 5
+    }
+  ],
+  "income": [
+    {
+      "salary": "5000",
+      "gifts": "500",
+      "refunds": "4500",
+      "other": "0",
+      "amount": "500",
+      "date": "2023-06-06",
+      "id": 3,
+      "userId": 3
+    },
+    {
+      "salary": "5000",
+      "gifts": "500",
+      "refunds": "4500",
+      "other": "0",
+      "amount": "500",
+      "date": "2023-06-06",
+      "id": 3,
+      "userId": 2
+    },
+    {
+      "salary": "5000",
+      "gifts": "500",
+      "refunds": "4500",
+      "other": "0",
+      "amount": "500",
+      "date": "2023-06-06",
+      "id": 3,
+      "userId": 3
+    },
+    {
+      "salary": "5000",
+      "gifts": "500",
+      "refunds": "4500",
+      "other": "0",
+      "amount": "500",
+      "date": "2023-06-06",
+      "id": 3,
+      "userId": 3
+    }
+  ],
+  "expense": [
+    {
+      "food_drink": "500",
+      "shopping": "123",
+      "housing": "800",
+      "bills": "7000",
+      "vehicle_transport": "500",
+      "lifestyle": "600",
+      "amount": "",
+      "date": "",
+      "id": 3
+    }
+  ]
 }
